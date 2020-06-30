@@ -1,0 +1,79 @@
+구글 코랩 사용법
+구글 colaboratory 서비스, 줄여서 코랩(Colab)이라고 부르는 웹 서비스는 
+주피터 노트북을 구글 서버에서 가동시키고 사용자가 마음대로 사용할 수 있도록 
+무료로 제공한다.
+이 서비스를 이용하려면 구글 Gmail 계정을 가지고 있어야 한다. 
+
+1. 코랩 노트북 장점
+별도의 파이썬 설치 없이 웹 브라우저 만을 이용해 주피터 노트북 작업 가능
+다른 사용자와 공유 쉽고, 연구 및 교육용으로 많이 사용
+Tensorflow, keras, matplotlib, scikit-learn, pandas 등 데이터 분석 관련 패키지 사용
+무료로 GPU를 사용
+
+2. 구글 코랩 사용을 위한 준비 
+- Gmail 계정 생성 -> 로그인 
+- google.com 시작페이지 -> Google apps -> Drive 로그인 
+- dataset 폴더 생성 -> file upload(Titanic.csv, sam_kospi.csv)
+
+3. 구글 코랩 시작하기
+http://colab.research.google.com -> 구글 코랩 시작 페이지 이동 
+-> Google 로그인
+
+4. [파일] -> [새 노트] 작성 
+!python --version # 실행버튼 클릭 
+Python 3.6.9
+
+# local 파일 열기
+from google.colab import files
+import pandas as pd
+import io
+
+uploaded = files.upload() # iris.csv 파일 선택 
+df = pd.read_csv(io.BytesIO(uploaded['iris.csv']))
+df.info()
+
+# drive 파일 열기  
+# 1) drive 연동
+from google.colab import drive
+drive.mount('/content/drive/')
+URL 클릭 -> 암호키 복사/붙여넣기 
+
+# 2) drive 확인 : Mounted as /content/drive
+!ls '/content/drive/' # 'My Drive'
+
+# 3) directory file 목록 확인 : dataset은 google driver에서 기존에 만듬 
+!ls -Fcal '/content/drive/My Drive/dataset'
+-rw------- 1 root root 12382 Aug 19  2019 sam_kospi.csv
+-rw------- 1 root root  1170 Aug 21  2019 Titanic.csv
+
+# 4) 파일 처리 
+# Titanic.csv 파일 처리 
+import pandas as pd 
+titanic = pd.read_csv("/content/drive/My Drive/dataset/Titanic.csv")
+print(titanic)
+print(titanic.info())
+
+titanic['Freq'].plot(kind='bar')
+
+tab = pd.crosstab(titanic.Class, titanic.Survived)
+print(tab)
+
+# sam_kospi 파일 처리 
+kospi = pd.read_csv("/content/drive/My Drive/dataset/sam_kospi.csv")
+print(kospi.head())
+
+print(kospi.describe())
+kospi[['High', 'Low']].plot()
+
+# 노트 이름 변경 : [파일] -> [노트 이름 변경]
+# 노트 다운로드 : [파일] -> [.ipynb 다운로드]
+
+# 5. tensorflow 사용 
+ [파일] -> [새 노트] 작성 
+
+# 버전 확인 
+import tensorflow as tf
+tf.__version__ # 2.2.0 -> 최신 버전 제공 
+
+
+

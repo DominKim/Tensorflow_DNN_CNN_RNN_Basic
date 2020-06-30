@@ -10,12 +10,16 @@ step01_keras_cifar10_CNN_model.py
 4. Model 평가
 5. Model history
 """
+
 import tensorflow as tf # ver2.x
 from tensorflow.keras import Sequential                     # model
 from tensorflow.keras.datasets.cifar10 import load_data     # datase
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.layers import Conv2D, MaxPooling2D    # Conv
 from tensorflow.keras.layers import Dense, Flatten, Dropout # DNN
+import time
+
+start_time = time.time()
 
 # 1. dataset load
 (x_train, y_train), (x_val, y_val) = load_data()
@@ -150,3 +154,6 @@ for i in range(100):
         print("success :", labels[y_true[i]])
     else:
         print("fail : real({}) -> pred({})".format(labels[y_true[i]], labels[y_pred[i]]))
+
+end_time = time.time() - start_time
+print("소요시간 :", end_time)
