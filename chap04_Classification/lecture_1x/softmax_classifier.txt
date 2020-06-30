@@ -1,0 +1,29 @@
+# x, y 공급 data 
+# [털, 날개]
+x_data = np.array(
+    [[0, 0], [1, 0], [1, 1], [0, 0], [0, 1], [1, 1]]) # [6, 2]
+
+# [기타, 포유류, 조류] : [6, 3] 
+y_data = np.array([
+    [1, 0, 0],  # 기타[0]
+    [0, 1, 0],  # 포유류[1]
+    [0, 0, 1],  # 조류[2]
+    [1, 0, 0],
+    [1, 0, 0],
+    [0, 0, 1]
+])
+
+
+# softmax 분류기 
+# 1) 회귀방정식 : 예측치 
+model = tf.matmul(X, w) + b # 회귀모델 
+
+# softmax(예측치)
+softmax = tf.nn.softmax(model) 
+
+# (2) loss function : Entropy 이용 : -sum(Y * log(model)) 
+loss = -tf.reduce_mean(Y * tf.log(softmax) + (1 - Y) * tf.log(1 - softmax))
+
+
+# 3) optimizer : 오차 최소화(w, b update) 
+train = tf.train.AdamOptimizer(0.1).minimize(loss) # 오차 최소화

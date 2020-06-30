@@ -1,0 +1,19 @@
+
+# x, y 공급 data 
+# x변수 : [hours, video]
+x_data = [[1, 2], [2, 3], [3, 1], [4, 3], [5, 3], [6, 2]] # [6,2]
+
+# y변수 : binary data (fail or pass)
+y_data = [[0], [0], [0], [1], [1], [1]] # 이항분류 
+
+
+# sigmoid 분류기
+# (1) model : 회귀방정식 
+model = tf.matmul(X, w) + b 
+sigmoid = tf.sigmoid(model)  
+
+# (2) loss function : Entropy 이용 = -sum(Y * log(model)) 
+loss = -tf.reduce_mean(Y * tf.log(sigmoid) + (1-Y) * tf.log(1-sigmoid))
+
+# (3) optimizer 
+train = tf.train.GradientDescentOptimizer(0.1).minimize(loss) # 오차 최소화
