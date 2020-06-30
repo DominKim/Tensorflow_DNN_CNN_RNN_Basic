@@ -117,3 +117,18 @@
 >> [step01_mnist_cnn_basic](https://github.com/DominKim/Tensorflow_with_Python/blob/master/chap07_CNN/lecture_1x/step01_mnist_cnn_basic.py)  
 >> [step02_real_image_cnn_basic](https://github.com/DominKim/Tensorflow_with_Python/blob/master/chap07_CNN/lecture_1x/step02_real_image_cnn_basic.py)  
 >> [step03_mnist_CNN_model](https://github.com/DominKim/Tensorflow_with_Python/blob/master/chap07_CNN/lecture_1x/step03_mnist_CNN_model.py)  # Tensorflow_DNN_CNN_RNN_Basic
+>> [step04_mnist_CNN_name_scopre](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap07_CNN/lecture_1x/step04_mnist_CNN_name_scopre.py)  
+> ver_2x
+>> [step01_keras_cifar10_CNN_model](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap07_CNN/lecture_2x/step01_keras_cifar10_CNN_model.py)  
+>> [step02_export_CNN_model](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap07_CNN/lecture_2x/step02_export_CNN_model.py)  
+> cat_dog_classifier
+>> [lecture_3_cat_dog_classifier](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/tree/master/chap07_CNN/lecture_3_cat_dog_classifier)  
+8. Celeb_CNN
+>> [lecture01_image_crawling](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/tree/master/chap08_Celeb_CNN/lecture01_image_crawling)  
+>> [lecture02_face_landmark](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/tree/master/chap08_Celeb_CNN/lecutre02_face_landmark)  
+>> [lecture03_CNN_classifier](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/tree/master/chap08_Celeb_CNN/lecture03_CNN_classifier)  
+9. word_embedding_RNN
+>> [step01_text_vector](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap09_word_embedding_RNN/lecture/step01_text_vector.py)  
+>> [step02_features_extract](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap09_word_embedding_RNN/lecture/step02_features_extract.py)  
+>> [step03_sparse_matrix_classifier](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap09_word_embedding_RNN/lecture/step03_sparse_matrix_classifier.py)  
+>> [step04_word_embedding_LSTM](https://github.com/DominKim/Tensorflow_DNN_CNN_RNN_Basic/blob/master/chap09_word_embedding_RNN/lecture/step04_word_embedding_LSTM.py)  
